@@ -1,3 +1,4 @@
+import tonicas
 import consoante
 import vogais
 
