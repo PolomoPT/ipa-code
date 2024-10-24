@@ -4,7 +4,7 @@ import classes
 def vogais(seleção):
     seleção = monotongos_nasais(seleção)
     seleção = ditongos_nasais(seleção)
-    seleção = vogais_acentuadas
+    seleção = vogais_acentuadas(seleção)
     seleção = finais(seleção)
     return seleção
 
@@ -21,6 +21,7 @@ def vogais_acentuadas(seleção):
     seleção = re.sub("ó", "ɔ", seleção)
     seleção = re.sub("ô", "o", seleção)
    #seleção = re.sub("ú", "u", seleção)
+    return seleção
 
 def monotongos_nasais(seleção):
     seleção = re.sub("ã(?![o|e])", "ɐ̃", seleção)
