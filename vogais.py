@@ -2,9 +2,9 @@ import re
 import classes
 
 def vogais(seleção):
+    seleção = vogais_acentuadas(seleção)
     seleção = monotongos_nasais(seleção)
     seleção = ditongos_nasais(seleção)
-    seleção = vogais_acentuadas(seleção)
     seleção = finais(seleção)
     return seleção
 
@@ -25,17 +25,17 @@ def vogais_acentuadas(seleção):
 
 def monotongos_nasais(seleção):
     seleção = re.sub("ã(?![o|e])", "ɐ̃", seleção)
-    seleção = re.sub("[a|â](?="+classes.c_nasais+classes.c_vogais+")", "ɐ̃", seleção)
-    seleção = re.sub("[a|â]"+classes.c_nasais+"(?="+classes.c_consoantes+")", "ɐ̃", seleção)
-    seleção = re.sub("[e|ê](?="+classes.c_nasais+classes.c_vogais+")", "ẽ", seleção)
-    seleção = re.sub("[e|ê]"+classes.c_nasais+"(?="+classes.c_consoantes+")", "ẽ", seleção)
-    seleção = re.sub("[i|í](?="+classes.c_nasais+classes.c_vogais+")", "ĩ", seleção)
-    seleção = re.sub("[i|í]"+classes.c_nasais+"(?="+classes.c_consoantes+")", "ĩ", seleção)
+    seleção = re.sub("[a|â](?=[m|n]["+classes.vogais+"])", "ɐ̃", seleção)
+    seleção = re.sub("[a|â][m|n]"+"(?=["+classes.consoantes+"])", "ɐ̃", seleção)
+    seleção = re.sub("[e|ê](?=[m|n]["+classes.vogais+"])", "ẽ", seleção)
+    seleção = re.sub("[e|ê][m|n]"+"(?=["+classes.consoantes+"])", "ẽ", seleção)
+    seleção = re.sub("[i|í](?=[m|n]["+classes.vogais+"])", "ĩ", seleção)
+    seleção = re.sub("[i|í][m|n]"+"(?=["+classes.consoantes+"])", "ĩ", seleção)
    #seleção = re.sub("õ(?!e)", "õ", seleção)
-    seleção = re.sub("[o|ô](?="+classes.c_nasais+classes.c_vogais+")", "õ", seleção)
-    seleção = re.sub("[o|ô]"+classes.c_nasais+"(?="+classes.c_consoantes+")", "õ", seleção)
-    seleção = re.sub("[u|ú](?="+classes.c_nasais+classes.c_vogais+")", "ũ", seleção)
-    seleção = re.sub("[u|ú]so"+classes.c_nasais+"(?="+classes.c_consoantes+")", "ũ", seleção)
+    seleção = re.sub("[o|ô](?=[m|n]["+classes.vogais+"])", "õ", seleção)
+    seleção = re.sub("[o|ô][m|n]"+"(?=["+classes.consoantes+"])", "õ", seleção)
+    seleção = re.sub("[u|ú](?=[m|n]["+classes.vogais+"])", "ũ", seleção)
+    seleção = re.sub("[u|ú][m|n]"+"(?=["+classes.consoantes+"])", "ũ", seleção)
     return seleção
 
 def ditongos_nasais(seleção):
