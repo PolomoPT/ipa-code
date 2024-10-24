@@ -4,4 +4,6 @@ import vogais
 
 seleção = input()
 pós_consoante = consoante.consoante(seleção)
-print(pós_consoante)
+pós_vogal = vogais.vogais(pós_consoante)
+result = pós_vogal
+print(result)

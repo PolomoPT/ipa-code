@@ -1,0 +1,5 @@
+c_consoantes = "[p|b|m|f|v|t|d|n|l|ɾ|s|z|ʃ|ʒ|ɲ|ʎ|k|g|ʁ]"
+c_sonoras = "[b|m|v|d|n|l|ɾ|z|ʒ|ɲ|ʎ|g|ʁ]"
+c_surdas = "[p|f|t|d|s|ʃ|k]"
+c_nasais = "[m|n]"
+c_vogais = "[i|ɛ|e|a|ɐ|ɔ|o|u]"
