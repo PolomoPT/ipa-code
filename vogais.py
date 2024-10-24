@@ -39,7 +39,7 @@ def monotongos_nasais(seleção):
     return seleção
 
 def ditongos_nasais(seleção):
-    seleção = re.sub("[ãe|âim]", "ɐ̃j̃", seleção) ## âim para câimbra
+    seleção = re.sub("ãe", "ɐ̃j̃", seleção) ## âim para câimbra
     seleção = re.sub("ão", "ɐ̃w̃", seleção)
     seleção = re.sub("õe", "õj̃", seleção)
     return seleção
