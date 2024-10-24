@@ -11,6 +11,7 @@ def vogais(seleção):
 def finais(seleção):
     seleção = re.sub(r"e(?=\s|$)", "i", seleção)   
     seleção = re.sub(r"o(?=\s|$)", "u", seleção)
+    seleção = re.sub(r"a(?=\s|$)", "a", seleção)
     return seleção
 
 def vogais_acentuadas(seleção):
