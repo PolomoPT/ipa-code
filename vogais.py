@@ -2,7 +2,13 @@ import re
 import classes
 
 def vogais(foo):
+    foo = finais(foo)
     foo = nasais(foo)
+    return foo
+
+def finais(foo):
+    foo = re.sub(r"e(?=\s|$)", "i", foo)   
+    foo = re.sub(r"o(?=\s|$)", "u", foo)
     return foo
 
 def nasais(foo):
