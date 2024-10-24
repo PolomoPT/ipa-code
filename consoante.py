@@ -1,10 +1,8 @@
 import re
 
-def consoante(foo):
-    foo = re.sub("qu","k",foo)
-    foo = re.sub("j", "ʒ", foo)
-    foo = re.sub("lh", "ʎ", foo) 
-    foo = re.sub("nh", "ɲ", foo)
-    return foo
-
-## for i in range(0 ,len(seleção), 2):
+def consoante(palavra_selecionada):
+    palavra_selecionada = re.sub("qu","k",palavra_selecionada)
+    palavra_selecionada = re.sub("j", "ʒ", palavra_selecionada)
+    palavra_selecionada = re.sub("lh", "ʎ", palavra_selecionada) 
+    palavra_selecionada = re.sub("nh", "ɲ", palavra_selecionada)
+    return palavra_selecionada
