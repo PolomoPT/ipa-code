@@ -26,24 +26,24 @@ def vogais_acentuadas(seleção):
 
 def monotongos_nasais(seleção):
     seleção = re.sub("ã(?![o|e])", "ɐ̃", seleção)
-    seleção = re.sub("[a|â](?=ɲ)", "ɐ̃", seleção)
+    seleção = re.sub("[a|â](?=j̃)", "ɐ̃", seleção)
     seleção = re.sub("[a|â](?=[m|n]["+classes.vogais+"])", "ɐ̃", seleção)
     seleção = re.sub("[a|â][m|n]"+"(?=["+classes.consoantes+"|\\s])", "ɐ̃", seleção)
 
-    seleção = re.sub("[e|ê](?=ɲ)", "ẽ", seleção)
+    seleção = re.sub("[e|ê](?=j̃)", "ẽ", seleção)
     seleção = re.sub("[e|ê](?=[m|n]["+classes.vogais+"])", "ẽ", seleção)
     seleção = re.sub("[e|ê][m|n]"+"(?=["+classes.consoantes+"|\\s])", "ẽ", seleção)
 
-    seleção = re.sub("[i|í](?=ɲ)", "ĩ", seleção)
+    seleção = re.sub("[i|í](?=j̃)", "ĩ", seleção)
     seleção = re.sub("[i|í](?=[m|n]["+classes.vogais+"])", "ĩ", seleção)
     seleção = re.sub("[i|í][m|n]"+"(?=["+classes.consoantes+"|\\s])", "ĩ", seleção)
 
    #seleção = re.sub("õ(?!e)", "õ", seleção)
-    seleção = re.sub("[o|ô](?=ɲ)", "õ", seleção)
+    seleção = re.sub("[o|ô](?=j̃)", "õ", seleção)
     seleção = re.sub("[o|ô](?=[m|n]["+classes.vogais+"])", "õ", seleção)
     seleção = re.sub("[o|ô][m|n]"+"(?=["+classes.consoantes+"|\\s])", "õ", seleção)
 
-    seleção = re.sub("[u|ú](?=ɲ)", "ũ", seleção)
+    seleção = re.sub("[u|ú](?=j̃)", "ũ", seleção)
     seleção = re.sub("[u|ú](?=[m|n]["+classes.vogais+"])", "ũ", seleção)
     seleção = re.sub("[u|ú][m|n]"+"(?=["+classes.consoantes+"|\\s])", "ũ", seleção)
     return seleção

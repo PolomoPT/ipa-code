@@ -1,5 +1,5 @@
-consoantes = "p|b|m|f|v|t|d|n|l|ɾ|s|z|ʃ|ʒ|ɲ|ʎ|k|g|ʁ"
-sonoras = "b|m|v|d|n|l|ɾ|z|ʒ|ɲ|ʎ|g|ʁ"
+consoantes = "p|b|m|f|v|t|d|n|l|ɾ|s|z|ʃ|ʒ|j̃|ʎ|k|g|ʁ"
+sonoras = "b|m|v|d|n|l|ɾ|z|ʒ|j̃|ʎ|g|ʁ"
 surdas = "p|f|t|d|s|ʃ|k"
 mn = "m|n"
 vogais = "i|ɛ|e|a|ɐ|ɔ|o|u"
