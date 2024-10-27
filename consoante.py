@@ -18,6 +18,8 @@ def consoante(seleção):
     seleção = re.sub("ch", "ʃ", seleção)
     seleção = re.sub("g(?=[e|é|ê|i|í])", "ʒ", seleção)
     seleção = re.sub("g(?=[a|á|ã|â|o|ó|ô|õ|u|ú])", "g", seleção)
+    seleção = re.sub("gu(?=[e|é|ê|i|í])","g",seleção)
+    seleção = re.sub("gu(?=[a|á|ã|â|o|ó|ô|õ|u|ú])","gʷ",seleção)
     ## seleção = re.sub ("s(?="+classes.l_vogais+")(?=<"+classes.l_vogais+")", "z", seleção) não funciona.
     seleção = re.sub("s(?=\\s|^)", "s", seleção)
     seleção = re.sub("s(?=<"+classes.consoantes+")", "s", seleção)
