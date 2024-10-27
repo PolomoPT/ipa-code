@@ -1,6 +1,5 @@
 import re
 import classes
-## *TROQUEI O ŋ PELO j̃ EM TUDO E A TRADUÇÃO DO NH PAROU DE FUNCIONAR
 ## Consonants that doesn't change in IPA (e.x. b = /b/) are not included in the code.
 def consoante(seleção):
     seleção = re.sub("qu(?=[e|é|ê|i|í])","k",seleção)
@@ -14,11 +13,11 @@ def consoante(seleção):
     seleção = re.sub("r(?=["+classes.l_vogais+"])", "ɾ", seleção)
     seleção = re.sub("c(?=[e|é|ê|i|í])", "s", seleção)
     seleção = re.sub("sh", "ʃ", seleção) 
-    ## seleção = re.sub("c(?=[a|á|ã|â|o|ó|ô|õ|u|ú])", "k", seleção) não funciona, mas não há problemas.
-    ## Como será o código para o Ç?
+    ## seleção = re.sub("c(?=[a|á|ã|â|o|ó|ô|õ|u|ú])", "k", seleção) não funciona
+    seleção = re.sub("ç", "s", seleção)
     seleção = re.sub("ch", "ʃ", seleção)
-    ##seleção = re.sub("g(?=[e|é|ê|i|í])", "ʒ", seleção) não funciona, mas não há problemas.
-    ##seleção = re.sub("g(?=[a|á|ã|â|o|ó|ô|õ|u|ú])", "g", seleção) não funciona, mas não há problemas.
+    seleção = re.sub("g(?=[e|é|ê|i|í])", "ʒ", seleção)
+    seleção = re.sub("g(?=[a|á|ã|â|o|ó|ô|õ|u|ú])", "g", seleção)
     ## seleção = re.sub ("s(?="+classes.l_vogais+")(?=<"+classes.l_vogais+")", "z", seleção) não funciona.
     seleção = re.sub("s(?=\\s|^)", "s", seleção)
     seleção = re.sub("s(?=<"+classes.consoantes+")", "s", seleção)
