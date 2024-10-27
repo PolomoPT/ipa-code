@@ -13,7 +13,7 @@ def consoante(seleção):
     seleção = re.sub("r(?=["+classes.l_vogais+"])", "ɾ", seleção)
     seleção = re.sub("c(?=[e|é|ê|i|í])", "s", seleção)
     seleção = re.sub("sh", "ʃ", seleção) 
-    ## seleção = re.sub("c(?=[a|á|ã|â|o|ó|ô|õ|u|ú])", "k", seleção) não funciona
+    seleção = re.sub("c(?=[a|á|ã|â|o|ó|ô|õ|u|ú])", "k", seleção)
     seleção = re.sub("ç", "s", seleção)
     seleção = re.sub("ch", "ʃ", seleção)
     seleção = re.sub("g(?=[e|é|ê|i|í])", "ʒ", seleção)
