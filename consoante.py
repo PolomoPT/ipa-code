@@ -28,4 +28,5 @@ def consoante(seleção):
     seleção = re.sub("x(?=\\s|^)", "ʃ", seleção)
     seleção = re.sub("x(?=\\s|$)", "ks", seleção)
     seleção = re.sub("x(?="+classes.consoantes+")", "s", seleção)
+    seleção = re.sub("xc", "s", seleção)
     return seleção
