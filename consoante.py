@@ -1,6 +1,6 @@
 import re
 import classes
-## Consonants that don't change in IPA (e.g. b = /b/) are not included in the code.
+## Consonants that don't change in IPA (e.g. b = /b/) are not included in this code.
 def consoante(seleção):
     seleção = re.sub("qu(?=[e|é|ê|i|í])","k",seleção)
     seleção = re.sub("qu(?=[a|á|ã|â|o|ó|ô|õ|u|ú])","kʷ",seleção)
@@ -20,7 +20,7 @@ def consoante(seleção):
     seleção = re.sub("g(?=[a|á|ã|â|o|ó|ô|õ|u|ú])", "g", seleção)
     seleção = re.sub("gu(?=[e|é|ê|i|í])","g",seleção)
     seleção = re.sub("gu(?=[a|á|ã|â|o|ó|ô|õ|u|ú])","gʷ",seleção)
-    ## seleção = re.sub ("s(?="+classes.l_vogais+")(?=<"+classes.l_vogais+")", "z", seleção) não funciona.
+    ## Como será o código para o S entre vogais?
     seleção = re.sub("s(?=\\s|^)", "s", seleção)
     seleção = re.sub("s(?=<"+classes.consoantes+")", "s", seleção)
     seleção = re.sub("sc", "s", seleção)
