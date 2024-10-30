@@ -20,8 +20,9 @@ def consoante(seleção):
     seleção = re.sub("g(?=[a|á|ã|â|o|ó|ô|õ|u|ú])", "g", seleção)
     seleção = re.sub("gu(?=[e|é|ê|i|í])","g",seleção)
     seleção = re.sub("gu(?=[a|á|ã|â|o|ó|ô|õ|u|ú])","gʷ",seleção)
-    ## Como será o código para o S entre vogais?
+    seleção = re.sub("s(?<="+classes.l_vogais+")(?="+classes.l_vogais+")(?<!\\s|^)(?!\\s|$)", "z", seleção)
     seleção = re.sub("s(?=\\s|^)", "s", seleção)
+    seleção = re.sub("s(?=\\s|$)", "s", seleção)
     seleção = re.sub("s(?=<"+classes.consoantes+")", "s", seleção)
     seleção = re.sub("sc", "s", seleção)
     seleção = re.sub("sç", "s", seleção)
