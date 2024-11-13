@@ -26,8 +26,11 @@ def ditongos_orais(seleção):
 
 def finais(seleção):
     seleção = re.sub("e$", "i", seleção)
+    seleção = re.sub("es$", "is", seleção)
     seleção = re.sub("o$", "u", seleção)
+    seleção = re.sub("os$", "us", seleção)
     seleção = re.sub("a$", "ɐ", seleção)
+    seleção = re.sub("as$", "ɐs", seleção)
     return seleção
 
 def vogais_acentuadas(seleção):
