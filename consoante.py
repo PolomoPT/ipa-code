@@ -2,6 +2,7 @@ import re
 import classes
 ## Consonants that don't change in IPA (e.g. b = /b/) are not included in this code.
 def consoante(seleção):
+    seleção = re.sub("^h", "", seleção)
     seleção = re.sub("(?<=["+classes.l_vogais+"])r(?=["+classes.l_vogais+"])", "ɾ", seleção)
     seleção = re.sub("(?<=["+classes.l_ataque+"])r(?=["+classes.l_vogais+"])", "ɾ", seleção)
     seleção = re.sub("(?<="+classes.l_vogais+")s(?="+classes.l_vogais+")", "z", seleção)
@@ -37,4 +38,5 @@ def consoante(seleção):
     seleção = re.sub("rr", "ʁ", seleção)
     seleção = re.sub("^r", "ʁ", seleção)
     seleção = re.sub("r(?=[$|"+classes.l_consoantes+classes.consoantes+"])", "ʁ", seleção)
+    seleção = re.sub("r$", "ʁ", seleção)
     return seleção
