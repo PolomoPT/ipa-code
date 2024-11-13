@@ -27,8 +27,10 @@ def ditongos_orais(seleção):
 def finais(seleção):
     seleção = re.sub("e$", "i", seleção)
     seleção = re.sub("es$", "is", seleção)
-    seleção = re.sub("o$", "u", seleção)
-    seleção = re.sub("os$", "us", seleção)
+    seleção = re.sub("io$", "ju", seleção)
+    seleção = re.sub("ios$", "jus", seleção)
+    seleção = re.sub("(?<!i)o$", "u", seleção)
+    seleção = re.sub("(?<!i)os$", "us", seleção)
     seleção = re.sub("a$", "ɐ", seleção)
     seleção = re.sub("as$", "ɐs", seleção)
     return seleção

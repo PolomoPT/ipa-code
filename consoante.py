@@ -7,7 +7,7 @@ def consoante(seleção):
     seleção = re.sub("(?<=["+classes.l_ataque+"])r(?=["+classes.l_vogais+"])", "ɾ", seleção)
     seleção = re.sub("(?<="+classes.l_vogais+")s(?="+classes.l_vogais+")", "z", seleção)
     seleção = re.sub("ss", "s", seleção)
-    seleção = re.sub("sc", "s", seleção)
+    seleção = re.sub("sc(?=["+classes.l_sj+"])", "s", seleção)
     seleção = re.sub("sç", "s", seleção)
     seleção = re.sub("xc(?=["+classes.l_sj+"])", "s", seleção)
     seleção = re.sub("c(?=["+classes.l_sj+"])", "s", seleção)
@@ -39,4 +39,7 @@ def consoante(seleção):
     seleção = re.sub("^r", "ʁ", seleção)
     seleção = re.sub("r(?=[$|"+classes.l_consoantes+classes.consoantes+"])", "ʁ", seleção)
     seleção = re.sub("r$", "ʁ", seleção)
+
+    ##handling especial para s antes de fones sonoros
+    seleção = re.sub("s(?="+classes.sonoras+")", "z", seleção)
     return seleção
