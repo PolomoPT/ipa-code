@@ -35,10 +35,10 @@ def consoante(seleção):
     seleção = re.sub("gu(?=["+classes.l_kg+"])","gʷ", seleção)
     seleção = re.sub("l$", "w", seleção)
     seleção = re.sub("l(?=["+classes.consoantes+classes.l_consoantes+"])", "w", seleção)
-    seleção = re.sub("rr", "ʁ", seleção)
-    seleção = re.sub("^r", "ʁ", seleção)
-    seleção = re.sub("r(?=[$|"+classes.l_consoantes+classes.consoantes+"])", "ʁ", seleção)
-    seleção = re.sub("r$", "ʁ", seleção)
+    seleção = re.sub("rr", "h", seleção)
+    seleção = re.sub("^r", "h", seleção)
+    seleção = re.sub("r(?=[$|"+classes.l_consoantes+classes.consoantes+"])", "h", seleção)
+    seleção = re.sub("r$", "h", seleção)
 
     ##handling especial para s antes de fones sonoros
     seleção = re.sub("s(?="+classes.sonoras+")", "z", seleção)

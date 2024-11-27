@@ -1,4 +1,4 @@
-consoantes = "p|b|m|f|v|t|d|n|l|ɾ|s|z|ʃ|ʒ|j̃|ʎ|k|g|ʁ" ##excluída coda de l /w/
+consoantes = "p|b|m|f|v|t|d|n|l|ɾ|s|z|ʃ|ʒ|j̃|ʎ|k|g|h" ##excluída coda de l /w/
 l_ataque = "p|b|f|v|t|d|k|g"
 sonoras = "b|m|v|d|n|l|ɾ|z|ʒ|j̃|ʎ|g"
 surdas = "p|f|t|d|s|ʃ|k"
