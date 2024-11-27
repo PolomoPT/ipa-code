@@ -12,7 +12,7 @@ while i < len(seleção_array):
     pós_vogal = vogais.vogais(pós_consoante)
     result = pós_vogal
     result = re.sub("-", "", result) ##remoção de hífens
-    print(result)
+    print("["+result+"]")
     i += 1
 
 

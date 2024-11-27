@@ -10,15 +10,15 @@ def vogais(seleção):
     return seleção
 
 def ditongos_orais(seleção):
-    seleção = re.sub("ai", "aj", seleção)
-    seleção = re.sub("au", "aw", seleção)
-    seleção = re.sub("ei", "ej", seleção)
-    seleção = re.sub("eu", "ew", seleção)
+    seleção = re.sub("ai(?!j̃)", "aj", seleção)
+    seleção = re.sub("au(?!j̃)", "aw", seleção)
+    seleção = re.sub("ei(?!j̃)", "ej", seleção)
+    seleção = re.sub("eu(?!j̃)", "ew", seleção)
     seleção = re.sub("éi", "ɛj", seleção)
     seleção = re.sub("éu", "ɛw", seleção)
     seleção = re.sub("iu", "iw", seleção)
-    seleção = re.sub("oi", "oj", seleção)
-    seleção = re.sub("ou", "ow", seleção)
+    seleção = re.sub("oi(?!nh)", "oj", seleção)
+    seleção = re.sub("ou(?!nh)", "ow", seleção)
     seleção = re.sub("ói", "ɔj", seleção)
     seleção = re.sub("óu", "ɔw", seleção)
     seleção = re.sub("ui", "uj", seleção)
